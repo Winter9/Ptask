@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/tareas.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <title>Tareas</title>
+    
+    
+        <div class="img-container">
+            <div class="inner-container">
+                <h1>Tareas</h1>
+            </div>
+        
+            <div>
+                <nav>
+                    <a>Luis Calderon</a>
+                </nav>
+            </div>
+        </div>
+    </head>  
+    
+    
+    <body>
+
+        <div class="form-container">
+            <div class="head-form">
+               <h2>Registro de tareas</h2>
+            </div>
+                  <div class="form-registro">
+               <form action="">
+                
+                <div>
+                    <label for="txt-Nombre">Nombre de tarea:</label>
+                    <input  type="text" id="txt-nombre" placeholder="Ingrese el nombre de la tarea" required>
+                </div>
+   
+                <div class="textarea-container">
+                    <label for="txt-descripcion">Descripcion:</label>
+                    <textarea id="txt-descripcion" placeholder="Ingrese descripcion de la tarea" required></textarea>
+                </div>
+
+                <div>
+                    <label for="slt-prioridad">Prioridad :</label>
+                    <select id="slt-prioridad" required>
+                        <option value="">--Seleccione una opcion--</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+
+                </div>
+
+                <div>
+                    <label for="slt-encargado">Encargado :</label>
+                    <select id="slt-encargado" required>
+                        <option value="">--Seleccione una opcion--</option>
+                        <option value="Pepe">Pepe</option>
+                        <option value="Joaquin">Joaquin</option>
+                        <option value="Luis">Luis</option>
+                        <option value="Nathalie">Nathalie</option>
+                        <option value="Amanda">Amanda</option>
+                    </select>
+
+                </div>
+
+                <div>
+                    <label for="txt-fecha">Fecha :</label>
+                    <input  type="date" id="txt-fecha" max="9999-01-01" required>
+                </div>
+   
+                <div>
+                    <button type="button" id="btn-registrar">Registrar tarea</button>
+                </div>
+               
+               </form>
+            </div>
+   
+        </div>
+        <div class="table">
+            <label for="txt-filtro">Buscar</label>
+            <input type="text" id="txt-filtro">
+            <table id="tbl-tareas">
+                <thead>
+                    <tr>
+                        <th>Tarea</th>
+                        <th>Descripcion</th>
+                        <th>Prioridad</th>
+                        <th>Encargado</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <!-- Scripts de terceros -->
+         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+         <!-- Scripts propios -->    
+
+         <script src="js/servicio-tareas.js"></script>
+         <script src="js/listar-tareas.js"></script>
+         <script src="js/tareas.js"> </script>
+
+    </body>
+    
+</html>
